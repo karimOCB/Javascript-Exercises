@@ -92,3 +92,27 @@ export function isPangram(input) {
   return new Set(input.toLowerCase().match(/[a-z]/g)).size === 26;
 }
 
+// 6 Not finished yet
+
+export class Matrix {
+  stringInput;
+  arrayMatrix;
+  constructor(input) {
+    this.stringInput = input;
+    this.arrayMatrix = this.arrayStructure()
+  }
+
+  arrayStructure() {
+    const lineBreakSeparation = this.stringInput.split("\n");
+    const whiteSpaceArr= lineBreakSeparation.map((arr) => arr.split(" "))
+    return whiteSpaceArr;
+  }
+
+  get rows() {
+    throw new Error('Remove this statement and implement this function');
+  }
+
+  get columns() {
+    throw new Error('Remove this statement and implement this function');
+  }
+}
